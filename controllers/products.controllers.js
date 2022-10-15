@@ -23,7 +23,7 @@ const agregarProducto = (request, response) => {
 const leerProductos = (request, response) => {
     try{
         const clave = request.headers.clave
-        if(clave === proccess.env.CLAVESECRETA) {
+        if(clave === process.env.CLAVESECRETA) {
             response.json({
                 success:true,
                 response: productos
