@@ -4,11 +4,11 @@ require('dotenv').config()
 
 const app = express()
 
-const port = 4000
+const port = proccess.env.PORT || 4000 
 
 app.use(express.json())
 
 app.use('/api', router)
 
-app.listen(port, ()=> console.log("server listening on port " + port ))
+app.listen(port,'0.0.0.0' ,()=> console.log("server listening on port " + port ))
 
